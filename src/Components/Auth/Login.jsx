@@ -11,7 +11,6 @@ const Login = ({handelLogin}) => {
         handelLogin(email,password)
         setemail('')
         setpassword('')
-
     }
 
   return (

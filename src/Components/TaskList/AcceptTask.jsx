@@ -1,0 +1,37 @@
+import React from 'react'
+
+const AcceptTask = ({data}) => {
+  return (
+    <div className='shrink-0 h-full w-75 p-6 bg-[#1C1C1C] border border-yellow-500/10 rounded-2xl flex flex-col justify-between hover:border-yellow-500/30 transition-all duration-300 shadow-xl group'>
+        <div>
+            <div className='flex justify-between items-center'>
+                <span className='px-3 py-1 text-xs font-bold uppercase tracking-wider text-yellow-400 bg-yellow-500/10 border border-yellow-500/20 rounded-md'>
+                    {data.category}
+                </span>
+                <span className='text-xs font-medium text-gray-500'>
+                    {data.taskDate}
+                </span>
+            </div>
+            
+            <h2 className='mt-5 text-xl font-semibold text-gray-100 group-hover:text-white transition-colors duration-200'>
+                {data.taskTitle}
+            </h2>
+            
+            <p className='text-sm mt-2 text-gray-400 leading-relaxed lines-clamp-3'>
+                {data.taskDescription}
+            </p>
+        </div>
+
+        <div className='flex gap-3 mt-6 w-full'>
+            <button className='flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-[11px] uppercase tracking-wider py-2 px-3 rounded-xl transition-all duration-200 shadow-md shadow-emerald-600/10 active:scale-[0.97]'>
+                Completed
+            </button>
+            <button className='flex-1 bg-rose-600/10 hover:bg-rose-600 text-rose-400 hover:text-white border border-rose-500/20 font-semibold text-[11px] uppercase tracking-wider py-2 px-3 rounded-xl transition-all duration-200 active:scale-[0.97]'>
+                Failed
+            </button>
+        </div>
+    </div>
+  )
+}
+
+export default AcceptTask

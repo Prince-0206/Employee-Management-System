@@ -1,60 +1,34 @@
-import React from 'react'
+    import React from 'react'
+    import AcceptTask from './AcceptTask'
+    import CompleteTask from './CompleteTask'
+    import NewTask from './NewTask'
+    import FailedTask from './FailedTask'
 
-const TaskList = () => {
-  return (
-    <div id='tasklist'  className=' overflow-x-auto flex items-center justify-start gap-5 flex-nowrap h-[55%] py-5 w-full mt-10'>
-
-        <div className=' shrink-0 h-full w-75 p-5 bg-pink-400 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-        <div className=' shrink-0 h-full w-75 p-5 bg-red-400 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-        <div className=' shrink-0 h-full w-75 p-5 bg-yellow-400 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-        <div className=' shrink-0 h-full w-75 p-5 bg-amber-950 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-        <div className=' shrink-0 h-full w-75 p-5 bg-blue-700 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-        <div className=' shrink-0 h-full w-75 p-5 bg-pink-400 rounded-xl '>
-        <div className='flex justify-between items-center'>
-            <h3 className= ' px-3 py-1 text-sm rounded bg-orange-600'>High</h3>
-            <h4 className='text-sm'>1 JUN 2026</h4>
-        </div>
-        <h2 className='mt-5 text-2xl font-semibold'>Earn 2Cr.</h2>
-        <p className='text-sm mt-2 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio voluptatibus similique architecto officia modi!</p>
-        </div>
-       
+    const TaskList = ({data}) => {
+        console.log(data)
+    return (
+    <div 
+    id='tasklist'  
+    className='overflow-x-auto flex items-center justify-start gap-5 flex-nowrap h-[55%] py-5 px-2 w-full mt-10 [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-[#111111] [&::-webkit-scrollbar-thumb]:bg-gray-800 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-700'
+    >
+        {data.tasks.map((elem , idx)=>{
+            if(elem.active){
+                return <AcceptTask key={idx} data={elem} />
+            }
+            if(elem.newTask){
+                    return <NewTask key={idx} data={elem} />
+            }
+                if(elem.completedTask){
+                    return <CompleteTask key={idx} data={elem} />
+                }
+                if(elem.failedTask){
+                    return <FailedTask key={idx} data={elem} />
+                }
+            
+            return null;
+        })}
     </div>
-  )
-}
+    )
+    }
 
-export default TaskList
+    export default TaskList

@@ -5,11 +5,10 @@ import Alltask from '../Parts/Alltask'
 
 const AdminDashBoard = () => {
   return (
-    <div className='h-screen w-full bg-[#111111] p-10 text-white font-sans'>
-      <Header />
-    <Createtask />
-    <Alltask />
-     
+    <div className='min-h-screen w-full bg-[#0F172A] p-6 md:p-10 text-white font-sans overflow-y-auto selection:bg-indigo-500/30'>
+        <Header />
+        <Createtask />
+        <Alltask />
     </div>
   )
 }
