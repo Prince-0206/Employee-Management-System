@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Authcontext } from '../../context/Authprovider'
 
 const Alltask = () => {
-    const authdata = useContext(Authcontext)
+    const [userdata , setuserdata] = useContext(Authcontext)
     
   return (
     <div className='bg-[#111827] border border-slate-800 p-6 mt-6 rounded-2xl shadow-2xl shadow-black/40 w-full'>
@@ -18,7 +18,7 @@ const Alltask = () => {
         
         {/* Table Body Container */}
         <div className='max-h-85 overflow-y-auto pr-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-800 [&::-webkit-scrollbar-thumb]:rounded-full'>
-            {authdata.employees.map((elem, idx)=>{
+            {userdata.map((elem, idx)=>{
                 return (
                     <div key={idx} className='bg-[#1f2937]/40 hover:bg-[#1f2937]/80 border border-slate-800 hover:border-indigo-500/30 py-3.5 px-5 flex justify-between items-center rounded-xl mt-3 transition-all duration-300 shadow-sm hover:shadow-indigo-500/5 group'>
                         

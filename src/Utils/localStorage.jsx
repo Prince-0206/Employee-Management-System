@@ -5,14 +5,14 @@ const employees = [
     "email": "e@1.com",
     "password": "123",
     "taskCounts": {
-      "active": 2,
+      "active": 1,
       "newTask": 1,
       "completed": 1,
       "failed": 0
     },
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "newTask": true,
         "completedTask": false,
         "failedTask": false,
@@ -49,14 +49,14 @@ const employees = [
     "email": "employee2@example.com",
     "password": "123",
     "taskCounts": {
-      "active": 2,
+      "active": 1,
       "newTask": 1,
       "completed": 0,
       "failed": 1
     },
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "newTask": true,
         "completedTask": false,
         "failedTask": false,
@@ -93,7 +93,7 @@ const employees = [
     "email": "employee3@example.com",
     "password": "123",
     "taskCounts": {
-      "active": 2,
+      "active": 1,
       "newTask": 1,
       "completed": 1,
       "failed": 0
@@ -101,18 +101,18 @@ const employees = [
     "tasks": [
       {
         "active": false,
-        "newTask": false,
-        "completedTask": true,
+        "newTask": true,
+        "completedTask": false,
         "failedTask": false,
         "taskTitle": "Create Social Graphics",
-        "taskDescription": "Design promotional templates for the product product hunt release.",
+        "taskDescription": "Design promotional templates for the product hunt release.",
         "taskDate": "2026-05-30",
         "category": "Marketing"
       },
       {
-        "active": true,
-        "newTask": true,
-        "completedTask": false,
+        "active": false,
+        "newTask": false,
+        "completedTask": true,
         "failedTask": false,
         "taskTitle": "Tailwind Refactoring",
         "taskDescription": "Clean up duplicated styles in global CSS sheets and components.",
@@ -137,14 +137,14 @@ const employees = [
     "email": "employee4@example.com",
     "password": "123",
     "taskCounts": {
-      "active": 2,
+      "active": 1,
       "newTask": 1,
       "completed": 1,
       "failed": 1
     },
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "newTask": true,
         "completedTask": false,
         "failedTask": false,
@@ -191,14 +191,14 @@ const employees = [
     "email": "employee5@example.com",
     "password": "123",
     "taskCounts": {
-      "active": 2,
+      "active": 1,
       "newTask": 1,
       "completed": 1,
       "failed": 0
     },
     "tasks": [
       {
-        "active": true,
+        "active": false,
         "newTask": true,
         "completedTask": false,
         "failedTask": false,
